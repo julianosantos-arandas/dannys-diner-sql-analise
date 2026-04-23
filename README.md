@@ -8,10 +8,10 @@ O cliente deseja utilizar dados operacionais para entender melhor o comportament
 
 Devido a restrições de privacidade, foi disponibilizada apenas uma amostra dos dados, composta por quatro conjuntos principais:
 
-🔹vendas 
-🔹cardápio 
-🔹clientes
-🔹clientes membros 
+🔹vendas  
+🔹cardápio   
+🔹clientes  
+🔹clientes membros   
 
 Além disso, há a necessidade de gerar datasets simplificados para que a equipe possa analisar as informações sem depender de consultas SQL.
 
@@ -19,10 +19,10 @@ Além disso, há a necessidade de gerar datasets simplificados para que a equipe
 
 O projeto é baseado em quatro tabelas principais:
 
-🔹 vendas: registros de compras realizadas pelos clientes
-🔹 menu: informações dos produtos disponíveis
-🔹 membros: clientes que aderiram ao programa de fidelidade
-🔹 clientes: clientes gerais do estabelecimento
+🔹 vendas: registros de compras realizadas pelos clientes  
+🔹 menu: informações dos produtos disponíveis  
+🔹 membros: clientes que aderiram ao programa de fidelidade  
+🔹 clientes: clientes gerais do estabelecimento   
 
 A tabela 'vendas' se relaciona com 'menu' através do 'produto_id' e com 'clientes' através do 'cliente_id', a tabela 'membros' se relaciona com 'clientes' através do 'cliente_id'
 
