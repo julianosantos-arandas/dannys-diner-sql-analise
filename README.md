@@ -45,3 +45,6 @@ Os dados utilizados são compostos por três tabelas:
 🔹 membros
   - cliente_id
   - data_afiliacao
+  
+🔹 vendas
+  - cliente_id
