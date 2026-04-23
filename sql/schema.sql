@@ -5,10 +5,17 @@ CREATE TABLE menu (
     preco INTEGER
 );
 
+-- Criação da tabela de clientes
+CREATE TABLE clientes (
+    cliente_id VARCHAR PRIMARY KEY
+);
+
 -- Criação da tabela de membros
 CREATE TABLE membros (
     cliente_id VARCHAR PRIMARY KEY,
-    data_afiliacao DATE
+    data_afiliacao DATE,
+
+    FOREIGN KEY (cliente_id) REFERENCES clientes(cliente_id)
 );
 
 -- Criação da tabela de vendas
@@ -17,6 +24,6 @@ CREATE TABLE vendas (
     data_pedido DATE,
     produto_id INTEGER,
 
-    FOREIGN KEY (produto_id) REFERENCES menu(produto_id),
-    FOREIGN KEY (cliente_id) REFERENCES membros(cliente_id)
-);
+    FOREIGN KEY (cliente_id) REFERENCES clientes(cliente_id),
+    FOREIGN KEY (produto_id) REFERENCES menu(produto_id)
+    );
