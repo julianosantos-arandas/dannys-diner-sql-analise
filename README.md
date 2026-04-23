@@ -18,9 +18,9 @@ Além disso, há a necessidade de gerar datasets simplificados para que a equipe
 
 O projeto é baseado em três tabelas principais:
 
-🔹 vendas: registros de compras realizadas pelos clientes
-🔹 menu: informações dos produtos disponíveis
-🔹 membros: clientes que aderiram ao programa de fidelidade
+🔹 vendas: registros de compras realizadas pelos clientes   
+🔹 menu: informações dos produtos disponíveis   
+🔹 membros: clientes que aderiram ao programa de fidelidade   
 
 A tabela 'vendas' se relaciona com 'menu' através do 'produto_id' e com 'membros' através do 'cliente_id'.
 
