@@ -14,7 +14,7 @@ Devido a restrições de privacidade, foi disponibilizada apenas uma amostra dos
 
 Além disso, há a necessidade de gerar datasets simplificados para que a equipe possa analisar as informações sem depender de consultas SQL.
 
-## Modelo de Dados
+🔵 Modelo de Dados
 
 O projeto é baseado em três tabelas principais:
 
@@ -25,3 +25,21 @@ O projeto é baseado em três tabelas principais:
 A tabela 'vendas' se relaciona com 'menu' através do 'produto_id' e com 'membros' através do 'cliente_id'.
 
 ![Diagrama ER](docs/er_diagram.png)
+
+🔵 Dataset
+
+Os dados utilizados são compostos por três tabelas:
+
+🔹 vendas
+  - cliente_id
+  - data_pedido
+  - produto_id
+
+🔹 menu
+  - produto_id
+  - nome_produto
+  - preco
+
+🔹 membros
+  - cliente_id
+  - data_afiliacao
