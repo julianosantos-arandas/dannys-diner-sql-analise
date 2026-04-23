@@ -8,9 +8,9 @@ O cliente deseja utilizar dados operacionais para entender melhor o comportament
 
 Devido a restrições de privacidade, foi disponibilizada apenas uma amostra dos dados, composta por três conjuntos principais:
 
-🔹vendas (sales)
-🔹cardápio (menu)
-🔹clientes membros (members)
+🔹vendas (sales)  
+🔹cardápio (menu)  
+🔹clientes membros (members)  
 
 Além disso, há a necessidade de gerar datasets simplificados para que a equipe possa analisar as informações sem depender de consultas SQL.
 
