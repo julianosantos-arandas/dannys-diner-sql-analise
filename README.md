@@ -1,3 +1,5 @@
+PROJETO EM PROGRESSO
+
 🔵 Introdução
 
 Um cliente abriu um restaurante japonês em 2025 chamado Danny's Dinner e, ao longo desse período, coletou alguns dados básicos sobre sua operação. No entanto, ele ainda não sabe como utilizá-los de forma estratégica para impulsionar o crescimento ou garantir a sustentabilidade do negócio.
