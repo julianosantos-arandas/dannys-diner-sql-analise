@@ -48,3 +48,29 @@ Os dados utilizados são compostos por três tabelas:
   
 🔹 vendas
   - cliente_id
+
+    
+
+🔵 Perguntas de Negócio
+
+As análises foram conduzidas para responder às seguintes questões:
+
+1. Qual foi o valor total gasto por cada cliente no restaurante?
+
+2. Em quantos dias diferentes cada cliente visitou o restaurante?
+
+3. Qual foi o primeiro item do cardápio comprado por cada cliente?
+
+4. Qual é o item mais vendido do cardápio e quantas vezes ele foi comprado no total?
+
+5. Qual foi o item mais consumido por cada cliente?
+
+6. Qual item foi comprado primeiro por cada cliente após se tornar membro do programa de fidelidade?
+
+7. Qual item foi comprado imediatamente antes de o cliente se tornar membro?
+
+8. Qual a quantidade total de itens e o valor gasto por cada cliente antes de se tornar membro?
+
+9. Considerando que cada $1 gasto equivale a 10 pontos e que sushi possui multiplicador de 2x, quantos pontos cada cliente acumulou?
+
+10. Durante a primeira semana após a adesão ao programa (incluindo a data de adesão), os clientes ganham 2x pontos em todos os itens. Quantos pontos os clientes A e B acumularam até o final de janeiro?
