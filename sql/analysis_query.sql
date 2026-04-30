@@ -2,6 +2,12 @@
 --1 - Qual foi o valor total gasto por cada cliente no restaurante?--
 =====================================================================
 
+/*Para obter o resultado:
+1) obter o cliente_id na tabela de vendas
+2) associar cada venda ao preço do produto na tabela menu
+3) somar os valores dos produtos
+4) agrupar o resultado por cliente
+*/
 SELECT 
     v.cliente_id,
     SUM(m.preco) AS total_gasto
@@ -14,6 +20,12 @@ ORDER BY total_gasto DESC;
 --2. Em quantos dias diferentes cada cliente visitou o restaurante?--
 =====================================================================
 
+/*Para obter o resultado:
+1) obter o cliente_id da tabela vendas
+2) somar quantos dias diferentes ele comprou, excluindo os duplicados
+3) agrupar pelo id do cliente
+4) ordenar por ordem decrescente*/
+
 SELECT 
     cliente_id,
 	COUNT(DISTINCT data_pedido) AS dias_visitados
@@ -24,6 +36,13 @@ ORDER BY dias_visitados DESC;
 ======================================================================
 --3. Qual foi o primeiro item do cardápio comprado por cada cliente?--
 ======================================================================
+
+/*Para obter o resultado:
+1) obter o cliente_id e as datas de compra na tabela vendas
+2) identificar e filtrar a menor data de compra para cada cliente
+3) recuperar o produto associado a essa data
+4) associar o produto à tabela menu para obter o nome*/
+
 
 SELECT
     v.cliente_id,
@@ -83,6 +102,23 @@ HAVING COUNT(*) = (
 --6. Qual item foi comprado primeiro por cada cliente após se tornar membro do programa de fidelidade?--
 ========================================================================================================
 
+SELECT
+    v.cliente_id,
+    m.nome_produto,
+    v.data_pedido
+FROM vendas v
+JOIN (
+    SELECT
+    v.cliente_id,
+    MIN(v.data_pedido) AS primeira_data
+    FROM vendas v
+    JOIN membros mb ON mb.cliente_id = v.cliente_id
+    WHERE v.data_pedido >= mb.data_afiliacao
+    GROUP BY v.cliente_id
+) x
+    ON v.cliente_id = x.cliente_id
+    AND v.data_pedido = x.primeira_data
+JOIN menu m ON m.produto_id = v.produto_id;
 
 --7. Qual item foi comprado imediatamente antes de o cliente se tornar membro?--
 
